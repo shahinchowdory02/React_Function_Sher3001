@@ -1,4 +1,4 @@
-// import "./App.css";
+// import "./App.css";0
 
 // function App() {
 //   function btnClick() {
@@ -55,22 +55,41 @@
 
 // export default App;
 
-const App = () => {
-  function inputChanging(value) {
-    console.log(value);
-  }
+// const App = () => {
+//   function inputChanging(value) {
+//     console.log(value);
+//   }
 
-  return (
-    <div>
-      <input
-        onChange={function (elem) {
-          inputChanging(elem.target.value);
-        }}
-        type="text"
-        placeholder="Enter Name"
-      />
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <input
+//         onChange={function (elem) {
+//           inputChanging(elem.target.value);
+//         }}
+//         type="text"
+//         placeholder="Enter Name"
+//       />
+//     </div>
+//   );
+// };
 
-export default App;
+// export default App;
+
+// const App = () => {
+//   let a = 20;
+
+//   function changeA() {
+//     console.log(a);
+//     a = 30;
+//     console.log(a);
+//   }
+
+//   return (
+//     <div>
+//       <h1>{a}</h1>
+//       <button onClick={changeA}>click</button>
+//     </div>
+//   );
+// };
+
+// export default App;
