@@ -93,3 +93,30 @@
 // };
 
 // export default App;
+
+import React, { use, useState } from "react";
+
+const App = () => {
+  const [a, setA] = useState(20);
+
+  function changeA() {
+    setA(30);
+    console.log(a);
+  }
+
+  return (
+    <div>
+      <div className="m-auto max-w-7xl text-center mt-10">
+        <h1> Value of a is {a} </h1>
+        <button
+          className="bg-gray-600 text-white px-4 py-1 rounded-md mt-4"
+          onClick={changeA}
+        >
+          click
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default App;
