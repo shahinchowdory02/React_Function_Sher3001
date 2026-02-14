@@ -99,15 +99,25 @@ import React, { use, useState } from "react";
 const App = () => {
   const [a, setA] = useState(20);
 
+  const [username, setUsername] = useState("Shahin");
+
+  // function changeA() {
+  //   setA(30);
+  //   console.log(a);
+  // }
+
   function changeA() {
-    setA(30);
-    console.log(a);
+    setA((prev) => prev + 1);
+    setUsername("Rovin");
   }
 
   return (
     <div>
       <div className="m-auto max-w-7xl text-center mt-10">
-        <h1> Value of a is {a} </h1>
+        <h1>
+          Value of a is {a} <br /> {username}
+        </h1>
+
         <button
           className="bg-gray-600 text-white px-4 py-1 rounded-md mt-4"
           onClick={changeA}
