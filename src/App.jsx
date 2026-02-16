@@ -101,6 +101,8 @@ const App = () => {
 
   const [username, setUsername] = useState("Shahin");
 
+  const [users, setUser] = useState([10, 20, 30]);
+
   // function changeA() {
   //   setA(30);
   //   console.log(a);
@@ -109,13 +111,14 @@ const App = () => {
   function changeA() {
     setA((prev) => prev + 1);
     setUsername("Rovin");
+    setUser([20, 30, 40]);
   }
 
   return (
     <div>
       <div className="m-auto max-w-7xl text-center mt-10">
         <h1>
-          Value of a is {a} <br /> {username}
+          Value of a is {a} <br /> {users} <br /> {username}
         </h1>
 
         <button
