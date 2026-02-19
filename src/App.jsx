@@ -1,4 +1,5 @@
-// import "./App.css";0
+// import "./App.css";
+0;
 
 // function App() {
 //   function btnClick() {
@@ -94,40 +95,66 @@
 
 // export default App;
 
-import React, { use, useState } from "react";
+// import React, { useState } from "react";
+
+// const App = () => {
+//   const [a, setA] = useState(20);
+//   const [username, setUsername] = useState("Shahin");
+//   const [users, setUser] = useState([10, 20, 30]);
+
+//   function changeA() {
+//     setA((prev) => prev + 1);
+//     setUsername("Rovin");
+//     setUser([20, 30, 40]);
+//   }
+
+//   return (
+//     <div>
+//       <div className="m-auto max-w-7xl text-center mt-10">
+//         <h1>
+//           Value of a is {a} <br /> {username} <br /> {users}
+//         </h1>
+
+//         <button
+//           className="bg-gray-600 text-white px-4 py-1 rounded-md mt-4"
+//           onClick={changeA}
+//         >
+//           click
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import { useState } from "react";
 
 const App = () => {
-  const [a, setA] = useState(20);
+  const [num, setNum] = useState(0);
 
-  const [username, setUsername] = useState("Shahin");
-
-  const [users, setUser] = useState([10, 20, 30]);
-
-  // function changeA() {
-  //   setA(30);
-  //   console.log(a);
-  // }
-
-  function changeA() {
-    setA((prev) => prev + 1);
-    setUsername("Rovin");
-    setUser([20, 30, 40]);
+  function incresaseNum() {
+    setNum((prev) => prev + 1);
   }
 
+  function decreaseNum() {
+    setNum((prev) => prev - 1);
+  }
   return (
     <div>
-      <div className="m-auto max-w-7xl text-center mt-10">
-        <h1>
-          Value of a is {a} <br /> {users} <br /> {username}
-        </h1>
-
-        <button
-          className="bg-gray-600 text-white px-4 py-1 rounded-md mt-4"
-          onClick={changeA}
-        >
-          click
-        </button>
-      </div>
+      <h1 className="text-3xl font-bold">{num}</h1>
+      <button
+        onClick={incresaseNum}
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+      >
+        increment
+      </button>
+      <button
+        onClick={decreaseNum}
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+      >
+        decrement
+      </button>
     </div>
   );
 };
