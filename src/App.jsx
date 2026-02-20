@@ -140,6 +140,11 @@ const App = () => {
   function decreaseNum() {
     setNum((prev) => prev - 1);
   }
+
+  function jumpNum() {
+    setNum((prev) => prev + 10);
+  }
+
   return (
     <div>
       <h1 className="text-3xl font-bold">{num}</h1>
@@ -151,9 +156,16 @@ const App = () => {
       </button>
       <button
         onClick={decreaseNum}
-        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ml-5"
       >
         decrement
+      </button>
+
+      <button
+        onClick={jumpNum}
+        className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-300 ml-5"
+      >
+        Jump to 10
       </button>
     </div>
   );
