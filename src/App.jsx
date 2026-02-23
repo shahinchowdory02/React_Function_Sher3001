@@ -128,44 +128,68 @@
 
 // export default App;
 
-import { useState } from "react";
+// import { useState } from "react";
+
+// const App = () => {
+//   const [num, setNum] = useState(0);
+
+//   function incresaseNum() {
+//     setNum((prev) => prev + 1);
+//   }
+
+//   function decreaseNum() {
+//     setNum((prev) => prev - 1);
+//   }
+
+//   function jumpNum() {
+//     setNum((prev) => prev + 10);
+//   }
+
+//   return (
+//     <div>
+//       <h1 className="text-3xl font-bold">{num}</h1>
+//       <button
+//         onClick={incresaseNum}
+//         className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+//       >
+//         increment
+//       </button>
+//       <button
+//         onClick={decreaseNum}
+//         className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ml-5"
+//       >
+//         decrement
+//       </button>
+
+//       <button
+//         onClick={jumpNum}
+//         className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-300 ml-5"
+//       >
+//         Jump to 10
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import React, { useState } from "react";
 
 const App = () => {
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState({ user: "Shahin", age: 20 });
 
-  function incresaseNum() {
-    setNum((prev) => prev + 1);
-  }
-
-  function decreaseNum() {
-    setNum((prev) => prev - 1);
-  }
-
-  function jumpNum() {
-    setNum((prev) => prev + 10);
-  }
+  const btnClicked = () => {
+    console.log(num);
+  };
 
   return (
     <div>
-      <h1 className="text-3xl font-bold">{num}</h1>
-      <button
-        onClick={incresaseNum}
-        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
-      >
-        increment
-      </button>
-      <button
-        onClick={decreaseNum}
-        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ml-5"
-      >
-        decrement
-      </button>
+      <h1>
+        {num.user}, {num.age}
+      </h1>
 
-      <button
-        onClick={jumpNum}
-        className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-300 ml-5"
-      >
-        Jump to 10
+      <button className="bg-blue-400 p-2 rounded-2xl" onClick={btnClicked}>
+        Click
       </button>
     </div>
   );
