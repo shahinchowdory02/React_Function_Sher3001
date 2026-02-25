@@ -179,7 +179,9 @@ const App = () => {
   const [num, setNum] = useState({ user: "Shahin", age: 20 });
 
   const btnClicked = () => {
-    console.log(num);
+    const newNum = { ...num };
+    newNum.user = "Aman";
+    console.log(newNum);
   };
 
   return (
