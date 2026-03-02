@@ -176,19 +176,17 @@
 import React, { useState } from "react";
 
 const App = () => {
-  const [num, setNum] = useState({ user: "Shahin", age: 20 });
+  const [num, setNum] = useState([10, 20, 30]);
 
   const btnClicked = () => {
-    const newNum = { ...num };
-    newNum.user = "Aman";
-    console.log(newNum);
+    const newNum = [...num];
+    newNum.push(101);
+    setNum(newNum);
   };
 
   return (
     <div>
-      <h1>
-        {num.user}, {num.age}
-      </h1>
+      <h1>{num}</h1>
 
       <button className="bg-blue-400 p-2 rounded-2xl" onClick={btnClicked}>
         Click
