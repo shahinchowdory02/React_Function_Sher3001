@@ -1,3 +1,18 @@
+import React from "react";
+
+const App = () => {
+  return (
+    <div className="flex text-center mt-20 m-auto max-w-[1100px] bg-blue-600 ">
+      <form>
+        <input id="" type="text" placeholder="Enter your name" />
+        <button>Click Here</button>
+      </form>
+    </div>
+  );
+};
+
+export default App;
+
 // import "./App.css";
 0;
 
@@ -173,26 +188,43 @@
 
 // export default App;
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-const App = () => {
-  const [num, setNum] = useState([10, 20, 30]);
+// const App = () => {
+//   // const [num, setNum] = useState(10);
 
-  const btnClicked = () => {
-    const newNum = [...num];
-    newNum.push(101);
-    setNum(newNum);
-  };
+//   // const btnClicked = () => {
+//   //   setNum(num + 1);
+//   // };
 
-  return (
-    <div>
-      <h1>{num}</h1>
+//   const [num, setNum] = useState(10);
 
-      <button className="bg-blue-400 p-2 rounded-2xl" onClick={btnClicked}>
-        Click
-      </button>
-    </div>
-  );
-};
+//   const btnClicked = () => {
+//     setNum((prev) => prev + 1);
+//     setNum((prev) => prev + 1);
+//     setNum((prev) => prev + 1);
+//   };
 
-export default App;
+//   // const btnClicked = () => {
+//   //   const newNum = [...num];
+//   //   newNum.push(101);
+//   //   setNum(newNum);
+//   // };
+//   // const [num, setNum] = useState({ user: "Shahin", age: 20 });
+
+//   // const btnClicked = () => {
+//   //   setNum((prev) => ({ ...prev, age: 50 }));
+//   // };
+
+//   return (
+//     <div>
+//       <h1>{num}</h1>
+
+//       <button className="bg-blue-400 p-2 rounded-2xl" onClick={btnClicked}>
+//         Click
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default App;
