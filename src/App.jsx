@@ -1,31 +1,38 @@
-import React from "react";
+// import React, { useState } from "react";
 
-const App = () => {
-  const submitHandlet = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted");
-  };
+// const App = () => {
+//   const [title, setTitle] = useState("");
 
-  return (
-    <form
-      onSubmit={(e) => {
-        submitHandlet(e);
-      }}
-    >
-      <div className="px-10 py-20 m-10 text-2xl  ">
-        <input
-          className="border-[0.5px]  "
-          id=""
-          type="text"
-          placeholder="Enter your name"
-        />
-        <button className="">Click Here</button>
-      </div>
-    </form>
-  );
-};
+//   const submitHandlet = (e) => {
+//     e.preventDefault();
+//     console.log("Form Submitted by", title);
+//     setTitle("");
+//   };
 
-export default App;
+//   return (
+//     <form
+//       onSubmit={(e) => {
+//         submitHandlet(e);
+//       }}
+//     >
+//       <div className="px-10 py-20 m-10 text-2xl  ">
+//         <input
+//           className="border-[0.5px]  "
+//           id=""
+//           type="text"
+//           placeholder="Enter your name"
+//           value={title}
+//           onChange={(e) => {
+//             setTitle(e.target.value);
+//           }}
+//         />
+//         <button className="">Click Here</button>
+//       </div>
+//     </form>
+//   );
+// };
+
+// export default App;
 
 // import "./App.css";
 0;
